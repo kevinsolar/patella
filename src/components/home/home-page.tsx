@@ -101,24 +101,30 @@ function AboutSection() {
 				</div>
 				<div>
 					<p className="text-lg leading-8 text-copy">{about.body}</p>
-					<div className="mt-8 grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">
-						<div className="grid gap-3">
-							{pillars.map((pillar) => (
-								<Card className="p-4" key={pillar}>
-									<BadgeCheck className="mb-3 text-brand" aria-hidden />
-									<p className="text-sm font-semibold text-ink">
-										{pillar}
-									</p>
-								</Card>
-							))}
-						</div>
-						<div className="relative min-h-64 overflow-hidden rounded-[6px] border border-line">
+					<div className="mt-8 grid gap-4 lg:grid-cols-[0.82fr_1.18fr]">
+						<Card className="p-4 sm:p-5 border-0">
+							<ul className="grid gap-3">
+								{pillars.map((pillar) => (
+									<li
+										className="flex items-center gap-3 text-sm font-semibold text-ink"
+										key={pillar}
+									>
+										<BadgeCheck
+											className="size-5 shrink-0 text-brand"
+											aria-hidden
+										/>
+										<span>{pillar}</span>
+									</li>
+								))}
+							</ul>
+						</Card>
+						<div className="relative min-h-64 overflow-hidden rounded-[6px] bg-ink p-6 shadow-cascade">
 							<Image
-								alt="Fachada da Patella Marketing Ads Intelligence"
-								className="object-cover"
+								alt="Patella Marketing Ads Intelligence"
+								className="object-contain p-8"
 								fill
-								sizes="(min-width: 1024px) 420px, 100vw"
-								src="/patella-local.webp"
+								sizes="(min-width: 1024px) 440px, 100vw"
+								src="/logo-patella-g.webp"
 							/>
 						</div>
 					</div>
@@ -320,7 +326,7 @@ function ContactSection() {
 				</div>
 			</div>
 			<div className="mt-12 border-t border-line pt-6 text-sm text-muted-copy">
-				Todos os direitos reservados (c) PATELLA BUSINESS INTELLIGENCE.
+				Todos os direitos reservados (c) PATELLA MARKETING ADS INTELLIGENCE.
 			</div>
 		</footer>
 	)
